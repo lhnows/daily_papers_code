@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name 'lhnows'
           git config --global user.email 'lhnows@qq.com'
-          git add papers/*.md README.md data/yesterday_titles.txt
+          git add .
           git commit -m \"每日更新: $(date +'%Y-%m-%d')\" || echo \"No changes to commit\"
           git push
