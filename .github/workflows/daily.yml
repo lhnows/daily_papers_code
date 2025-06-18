@@ -26,8 +26,9 @@ jobs:
 
       - name: Commit & Push Results
         run: |
+          ls
           git config --global user.name 'lhnows'
           git config --global user.email 'lhnows@qq.com'
           git add .
-          git commit -m \"每日更新: $(date +'%Y-%m-%d')\" || echo \"No changes to commit\"
+          git commit -m "每日更新" 
           git push
