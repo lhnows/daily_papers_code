@@ -1,0 +1,32 @@
+name: Daily Paper Update
+
+on:
+  schedule:
+    - cron: '0 5 * * *'  # 每天 UTC 时间 05:00 运行
+  workflow_dispatch:     # 可手动触发
+
+jobs:
+  run-daily-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install beautifulsoup4 requests
+
+      - name: Run Scraper
+        run: python run.py
+
+      - name: Commit & Push Results
+        run: |
+          git config --global user.name 'lhnows'
+          git config --global user.email 'lhnows@qq.com'
+          git add papers/*.md README.md data/yesterday_titles.txt
+          git commit -m \"每日更新: $(date +'%Y-%m-%d')\" || echo \"No changes to commit\"
+          git push
