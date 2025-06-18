@@ -26,7 +26,7 @@ def save_today_titles(titles):
             f.write(title + "\n")
 
 def resolve_github_links_and_pdf(code_url):
-    github_links = []
+    github_links = set()
     paper_pdf_link = ""
     try:
         full_url = PWC_BASE + code_url
@@ -37,7 +37,7 @@ def resolve_github_links_and_pdf(code_url):
         for tag in soup.select("a.code-table-link"):
             href = tag.get("href", "")
             if 'github.com' in href:
-                github_links.append(href)
+                github_links.add(href.strip())
 
         for a_tag in soup.select("a"):
             href = a_tag.get("href", "")
@@ -46,7 +46,7 @@ def resolve_github_links_and_pdf(code_url):
                 break
     except Exception:
         pass
-    return github_links, paper_pdf_link
+    return list(github_links), paper_pdf_link
 
 def scrape_paper_details(paper_url):
     abstract = ""
@@ -95,8 +95,9 @@ def save_markdown(papers):
         f.write("| 论文 | 代码 | 摘要 | 作者 |\n")
         f.write("|------|------|------|------|\n")
         for title, link, code_links, abstract, authors in papers:
+            unique_links = sorted(set(code_links))
             title_md = f"[{title}]({link})"
-            codes_md = ", ".join(f"[GitHub]({url})" for url in code_links) if code_links else ""
+            codes_md = ", ".join(f"[GitHub]({url})" for url in unique_links) if unique_links else ""
             abstract_md = abstract.replace("|", " ").replace("\n", " ").strip()
             authors_md = authors.replace("|", " ").strip()
             f.write(f"| {title_md} | {codes_md} | {abstract_md} | {authors_md} |\n")
@@ -106,7 +107,7 @@ def generate_readme():
     md_files = sorted([f for f in os.listdir(PAPERS_DIR) if f.endswith(".md")])
     with open("README.md", "w", encoding="utf-8") as f:
         f.write("# 每日最新论文更新\n\n")
-        f.write("本项目每天自动从 [PapersWithCode](https://paperswithcode.com/latest) 获取最新论文、代码和真实论文 PDF 链接，并生成 Markdown 文件。\n\n")
+        f.write("本项目每天自动更新 最新论文和配套代码，并生成 Markdown 文件。\n\n")
         f.write(f"**最新更新：{today}**\n\n")
         f.write("## 每日更新列表\n")
         for name in reversed(md_files):
