@@ -134,7 +134,7 @@ def main():
                 today_papers.append((title, *rest))
                 today_titles.add(title)
 
-        if stop or page >= 10:
+        if stop or page >= 100:
             break
         page += 1
 
