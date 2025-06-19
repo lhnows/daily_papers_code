@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 
 DATA_DIR = "data"
-PAPERS_DIR = "papers"
+PAPERS_DIR = "ppwcode"
 BASE_URL = "https://paperswithcode.com/latest?page={}"
 PWC_BASE = "https://paperswithcode.com"
 
@@ -111,7 +111,7 @@ def generate_readme():
         f.write(f"**最新更新：{today}**\n\n")
         f.write("## 每日更新列表\n")
         for name in reversed(md_files):
-            f.write(f"- [{name}](papers/{name})\n")
+            f.write(f"- [{name}](ppwcode/{name})\n")
 
 def main():
     yesterday = load_yesterday_titles()
