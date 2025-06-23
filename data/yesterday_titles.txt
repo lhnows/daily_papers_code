@@ -1,20 +1,52 @@
-Towards Robust Learning to Optimize with Theoretical Guarantees
-KDMOS:Knowledge Distillation for Motion Segmentation
-RL-Obfuscation: Can Language Models Learn to Evade Latent-Space Monitors?
-Navigating the growing field of research on AI for software testing -- the taxonomy for AI-augmented software testing and an ontology-driven literature survey
-Probabilistic Aggregation and Targeted Embedding Optimization for Collective Moral Reasoning in Large Language Models
-PeakWeather: MeteoSwiss Weather Station Measurements for Spatiotemporal Deep Learning
-Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification
-Leveraging Predictive Equivalence in Decision Trees
-Déjà Vu: Efficient Video-Language Query Engine with Learning-based Inter-Frame Computation Reuse
-A Variational Framework for Improving Naturalness in Generative Spoken Language Models
-Dataset distillation for memorized data: Soft labels can leak held-out teacher knowledge
-Expressive Score-Based Priors for Distribution Matching with Geometry-Preserving Regularization
-Refining music sample identification with a self-supervised graph neural network
-Busting the Paper Ballot: Voting Meets Adversarial Machine Learning
-SCISSOR: Mitigating Semantic Bias through Cluster-Aware Siamese Networks for Robust Classification
-Overcoming Overfitting in Reinforcement Learning via Gaussian Process Diffusion Policy
-Membership Inference Attacks as Privacy Tools: Reliability, Disparity and Ensemble
-Common Benchmarks Undervalue the Generalization Power of Programmatic Policies
-TriGuard: Testing Model Safety with Attribution Entropy, Verification, and Drift
-RMIT-ADM+S at the SIGIR 2025 LiveRAG Challenge
+DM-FNet: Unified multimodal medical image fusion via diffusion process-trained encoder-decoder
+One-Step Diffusion for Detail-Rich and Temporally Consistent Video Super-Resolution
+Global Ground Metric Learning with Applications to scRNA data
+Enhancing Hyperbole and Metaphor Detection with Their Bidirectional Dynamic Interaction and Emotion Knowledge
+All is Not Lost: LLM Recovery without Checkpoints
+MapFM: Foundation Model-Driven HD Mapping with Multi-Task Contextual Learning
+LIT-LVM: Structured Regularization for Interaction Terms in Linear Predictors using Latent Variable Models
+FedWSIDD: Federated Whole Slide Image Classification via Dataset Distillation
+Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
+SciVer: Evaluating Foundation Models for Multimodal Scientific Claim Verification
+The use of cross validation in the analysis of designed experiments
+One-shot Face Sketch Synthesis in the Wild via Generative Diffusion Prior and Instruction Tuning
+Conquering the Retina: Bringing Visual in-Context Learning to OCT
+DiscRec: Disentangled Semantic-Collaborative Modeling for Generative Recommendation
+Stable Gradients for Stable Learning at Scale in Deep Reinforcement Learning
+Classification of Multi-Parametric Body MRI Series Using Deep Learning
+Minimizing Structural Vibrations via Guided Flow Matching Design Optimization
+Open-World Object Counting in Videos
+COSMMIC: Comment-Sensitive Multimodal Multilingual Indian Corpus for Summarization and Headline Generation
+Learn to Vaccinate: Combining Structure Learning and Effective Vaccination for Epidemic and Outbreak Control
+A Comparative Evaluation of Deep Learning Models for Speech Enhancement in Real-World Noisy Environments
+Enhancing point cloud analysis via neighbor aggregation correction based on cross-stage structure correlation
+This is Your AI on Peer Pressure: An Observational Study of Inter-Agent Social Dynamics
+Evolutionary Caching to Accelerate Your Off-the-Shelf Diffusion Model
+AgentGroupChat-V2: Divide-and-Conquer Is What LLM-Based Multi-Agent System Need
+Multi-Interest Recommendation: A Survey
+Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material
+Show-o2: Improved Native Unified Multimodal Models
+HeurAgenix: Leveraging LLMs for Solving Complex Combinatorial Optimization Challenges
+Approximating Language Model Training Data from Weights
+Context-Informed Grounding Supervision
+MinosEval: Distinguishing Factoid and Non-Factoid for Tailored Open-Ended QA Evaluation with LLMs
+Privacy-Preserving Chest X-ray Classification in Latent Space with Homomorphically Encrypted Neural Inference
+SPARE: Single-Pass Annotation with Reference-Guided Evaluation for Automatic Process Supervision and Reward Modelling
+Advancing Loss Functions in Recommender Systems: A Comparative Study with a Rényi Divergence-Based Solution
+LoX: Low-Rank Extrapolation Robustifies LLM Safety Against Fine-tuning
+Semantically-Aware Rewards for Open-Ended R1 Training in Free-Form Generation
+Privacy-Shielded Image Compression: Defending Against Exploitation from Vision-Language Pretrained Models
+ABC: Adaptive BayesNet Structure Learning for Computational Scalable Multi-task Image Compression
+Acoustic Waveform Inversion with Image-to-Image Schrödinger Bridges
+Pixel-level Certified Explanations via Randomized Smoothing
+An Empirical Study of Bugs in Data Visualization Libraries
+Sampling 3D Molecular Conformers with Diffusion Transformers
+Capturing Polysemanticity with PRISM: A Multi-Concept Feature Description Framework
+ConLID: Supervised Contrastive Learning for Low-Resource Language Identification
+Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers
+DiscoSG: Towards Discourse-Level Text Scene Graph Parsing through Iterative Graph Refinement
+RAS-Eval: A Comprehensive Benchmark for Security Evaluation of LLM Agents in Real-World Environments
+Enhancing Vector Quantization with Distributional Matching: A Theoretical and Empirical Study
+SonicVerse: Multi-Task Learning for Music Feature-Informed Captioning
+WikiMixQA: A Multimodal Benchmark for Question Answering over Tables and Charts
+Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models
