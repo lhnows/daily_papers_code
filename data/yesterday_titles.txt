@@ -1,52 +1,77 @@
-DM-FNet: Unified multimodal medical image fusion via diffusion process-trained encoder-decoder
-One-Step Diffusion for Detail-Rich and Temporally Consistent Video Super-Resolution
-Global Ground Metric Learning with Applications to scRNA data
-Enhancing Hyperbole and Metaphor Detection with Their Bidirectional Dynamic Interaction and Emotion Knowledge
-All is Not Lost: LLM Recovery without Checkpoints
-MapFM: Foundation Model-Driven HD Mapping with Multi-Task Contextual Learning
-LIT-LVM: Structured Regularization for Interaction Terms in Linear Predictors using Latent Variable Models
-FedWSIDD: Federated Whole Slide Image Classification via Dataset Distillation
-Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
-SciVer: Evaluating Foundation Models for Multimodal Scientific Claim Verification
-The use of cross validation in the analysis of designed experiments
-One-shot Face Sketch Synthesis in the Wild via Generative Diffusion Prior and Instruction Tuning
-Conquering the Retina: Bringing Visual in-Context Learning to OCT
-DiscRec: Disentangled Semantic-Collaborative Modeling for Generative Recommendation
-Stable Gradients for Stable Learning at Scale in Deep Reinforcement Learning
-Classification of Multi-Parametric Body MRI Series Using Deep Learning
-Minimizing Structural Vibrations via Guided Flow Matching Design Optimization
-Open-World Object Counting in Videos
-COSMMIC: Comment-Sensitive Multimodal Multilingual Indian Corpus for Summarization and Headline Generation
-Learn to Vaccinate: Combining Structure Learning and Effective Vaccination for Epidemic and Outbreak Control
-A Comparative Evaluation of Deep Learning Models for Speech Enhancement in Real-World Noisy Environments
-Enhancing point cloud analysis via neighbor aggregation correction based on cross-stage structure correlation
-This is Your AI on Peer Pressure: An Observational Study of Inter-Agent Social Dynamics
-Evolutionary Caching to Accelerate Your Off-the-Shelf Diffusion Model
-AgentGroupChat-V2: Divide-and-Conquer Is What LLM-Based Multi-Agent System Need
-Multi-Interest Recommendation: A Survey
-Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material
-Show-o2: Improved Native Unified Multimodal Models
-HeurAgenix: Leveraging LLMs for Solving Complex Combinatorial Optimization Challenges
-Approximating Language Model Training Data from Weights
-Context-Informed Grounding Supervision
-MinosEval: Distinguishing Factoid and Non-Factoid for Tailored Open-Ended QA Evaluation with LLMs
-Privacy-Preserving Chest X-ray Classification in Latent Space with Homomorphically Encrypted Neural Inference
-SPARE: Single-Pass Annotation with Reference-Guided Evaluation for Automatic Process Supervision and Reward Modelling
-Advancing Loss Functions in Recommender Systems: A Comparative Study with a Rényi Divergence-Based Solution
-LoX: Low-Rank Extrapolation Robustifies LLM Safety Against Fine-tuning
-Semantically-Aware Rewards for Open-Ended R1 Training in Free-Form Generation
-Privacy-Shielded Image Compression: Defending Against Exploitation from Vision-Language Pretrained Models
-ABC: Adaptive BayesNet Structure Learning for Computational Scalable Multi-task Image Compression
-Acoustic Waveform Inversion with Image-to-Image Schrödinger Bridges
-Pixel-level Certified Explanations via Randomized Smoothing
-An Empirical Study of Bugs in Data Visualization Libraries
-Sampling 3D Molecular Conformers with Diffusion Transformers
-Capturing Polysemanticity with PRISM: A Multi-Concept Feature Description Framework
-ConLID: Supervised Contrastive Learning for Low-Resource Language Identification
-Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers
-DiscoSG: Towards Discourse-Level Text Scene Graph Parsing through Iterative Graph Refinement
-RAS-Eval: A Comprehensive Benchmark for Security Evaluation of LLM Agents in Real-World Environments
-Enhancing Vector Quantization with Distributional Matching: A Theoretical and Empirical Study
-SonicVerse: Multi-Task Learning for Music Feature-Informed Captioning
-WikiMixQA: A Multimodal Benchmark for Question Answering over Tables and Charts
-Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models
+LunarLoc: Segment-Based Global Localization on the Moon
+RGBTrack: Fast, Robust Depth-Free 6D Pose Estimation and Tracking
+Noise-Informed Diffusion-Generated Image Detection with Anomaly Attention
+InstructTTSEval: Benchmarking Complex Natural-Language Instruction Following in Text-to-Speech Systems
+Network Sparsity Unlocks the Scaling Potential of Deep Reinforcement Learning
+Large Language Models are Near-Optimal Decision-Makers with a Non-Human Learning Behavior
+Instituto de Telecomunicações at IWSLT 2025: Aligning Small-Scale Speech and Language Models for Speech-to-Text Learning
+Enhancing Step-by-Step and Verifiable Medical Reasoning in MLLMs
+AGC-Drive: A Large-Scale Dataset for Real-World Aerial-Ground Collaboration in Driving Scenarios
+Few-Shot Generalized Category Discovery With Retrieval-Guided Decision Boundary Enhancement
+MambaHash: Visual State Space Deep Hashing Model for Large-Scale Image Retrieval
+TransDreamerV3: Implanting Transformer In DreamerV3
+Reward-Agnostic Prompt Optimization for Text-to-Image Diffusion Models
+Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens
+Generating Directed Graphs with Dual Attention and Asymmetric Encoding
+Emergent Temporal Correspondences from Video Diffusion Transformers
+Explainable Rule Application via Structured Prompting: A Neural-Symbolic Approach
+TextBraTS: Text-Guided Volumetric Brain Tumor Segmentation with Innovative Dataset Development and Fusion Module Exploration
+Generative Modeling of Full-Atom Protein Conformations using Latent Diffusion on Graph Embeddings
+Multi-modal Anchor Gated Transformer with Knowledge Distillation for Emotion Recognition in Conversation
+YASMOT: Yet another stereo image multi-object tracker
+MEXA: Towards General Multimodal Reasoning with Dynamic Multi-Expert Aggregation
+From Generality to Mastery: Composer-Style Symbolic Music Generation via Large-Scale Pre-training
+TeXpert: A Multi-Level Benchmark for Evaluating LaTeX Code Generation by LLMs
+EndoMUST: Monocular Depth Estimation for Robotic Endoscopy via End-to-end Multi-step Self-supervised Training
+Cache Me If You Can: How Many KVs Do You Need for Effective Long-Context LMs?
+On Training-Test (Mis)alignment in Unsupervised Combinatorial Optimization: Observation, Empirical Exploration, and Analysis
+A Minimalist Optimizer Design for LLM Pretraining
+A Neural Operator based Hybrid Microscale Model for Multiscale Simulation of Rate-Dependent Materials
+Cross-Modal Epileptic Signal Harmonization: Frequency Domain Mapping Quantization for Pre-training a Unified Neurophysiological Transformer
+Generalizable Agent Modeling for Agent Collaboration-Competition Adaptation with Multi-Retrieval and Dynamic Generation
+JETHICS: Japanese Ethics Understanding Evaluation Dataset
+Loupe: A Generalizable and Adaptive Framework for Image Forgery Detection
+Long-term Traffic Simulation with Interleaved Autoregressive Motion and Scenario Generation
+ConciseHint: Boosting Efficient Reasoning via Continuous Concise Hints during Generation
+Camera Calibration via Circular Patterns: A Comprehensive Framework with Measurement Uncertainty and Unbiased Projection Model
+Simultaneous Translation with Offline Speech and LLM Models in CUNI Submission to IWSLT 2025
+Visual-Instructed Degradation Diffusion for All-in-One Image Restoration
+RiOT: Efficient Prompt Refinement with Residual Optimization Tree
+Reranking-based Generation for Unbiased Perspective Summarization
+Acquiring and Accumulating Knowledge from Diverse Datasets for Multi-label Driving Scene Classification
+Geometric Learning in Black-Box Optimization: A GNN Framework for Algorithm Performance Prediction
+Brain-inspired interpretable reservoir computing with resonant recurrent neural networks
+Can AI Dream of Unseen Galaxies? Conditional Diffusion Model for Galaxy Morphology Augmentation
+Universal Music Representations? Evaluating Foundation Models on World Music Corpora
+Off-Policy Actor-Critic for Adversarial Observation Robustness: Virtual Alternative Training via Symmetric Policy Evaluation
+Introducing EG-IPT and ipt~: a novel electric guitar dataset and a new Max/MSP object for real-time classification of instrumental playing techniques
+Mathematical Proof as a Litmus Test: Revealing Failure Modes of Advanced Large Reasoning Models
+Evaluating the Impact of Model Accuracy for Optimizing Battery Energy Storage Systems
+Watermarking Autoregressive Image Generation
+RAGentA: Multi-Agent Retrieval-Augmented Generation for Attributed Question Answering
+MAWIFlow Benchmark: Realistic Flow-Based Evaluation for Network Intrusion Detection
+Efficient and faithful reconstruction of dynamical attractors using homogeneous differentiators
+Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation with Ultimate Details
+Dense 3D Displacement Estimation for Landslide Monitoring via Fusion of TLS Point Clouds and Embedded RGB Images
+UniFork: Exploring Modality Alignment for Unified Multimodal Understanding and Generation
+Robust Dynamic Material Handling via Adaptive Constrained Evolutionary Reinforcement Learning
+Malware Classification Leveraging NLP & Machine Learning for Enhanced Accuracy
+Consistent Sampling and Simulation: Molecular Dynamics with Energy-Based Diffusion Models
+Adversarial Attacks and Detection in Visual Place Recognition for Safer Robot Navigation
+FinCoT: Grounding Chain-of-Thought in Expert Financial Reasoning
+From Data to Knowledge: Evaluating How Efficiently Language Models Learn Facts
+Cloud-Aware SAR Fusion for Enhanced Optical Sensing in Space Missions
+RealSR-R1: Reinforcement Learning for Real-World Image Super-Resolution with Vision-Language Chain-of-Thought
+Knee-Deep in C-RASP: A Transformer Depth Hierarchy
+ParkFormer: A Transformer-Based Parking Policy with Goal Embedding and Pedestrian-Aware Control
+Floating-Point Neural Networks Are Provably Robust Universal Approximators
+FedFitTech: A Baseline in Federated Learning for Fitness Tracking
+Co-Seg++: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation
+Leveraging Influence Functions for Resampling Data in Physics-Informed Neural Networks
+Mesh-Informed Neural Operator : A Transformer Generative Approach
+LLM-Generated Feedback Supports Learning If Learners Choose to Use It
+Probing the Robustness of Large Language Models Safety to Latent Perturbations
+Robust Reinforcement Learning for Discrete Compositional Generation via General Soft Operators
+Revela: Dense Retriever Learning via Language Modeling
+One Period to Rule Them All: Identifying Critical Learning Periods in Deep Networks
+AutoHFormer: Efficient Hierarchical Autoregressive Transformer for Time Series Prediction
