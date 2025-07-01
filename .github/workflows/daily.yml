@@ -23,7 +23,9 @@ jobs:
 
       - name: Run Scraper
         env:
-            API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
+            API_ENDPOINT: ${{ secrets.API_ENDPOINT }} # WPS 多维表格接口
+            COZEAUTHORIZATION: ${{ secrets.COZEAUTHORIZATION }}  # COZE 
+            COZEWEBHOOK: ${{ secrets.COZEWEBHOOK }} # COZE webhook
         run: python run.py
 
       - name: Commit & Push Results
