@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import os
 from datetime import datetime
+import json
 
 DATA_DIR = "data"
 PAPERS_DIR = "ppwcode"
@@ -113,6 +114,46 @@ def generate_readme():
         for name in reversed(md_files):
             f.write(f"- [{name}](ppwcode/{name})\n")
 
+def send_to_wps(papers):
+    # API端点
+    # api_url = ""
+    # Load API URL from GitHub Actions secrets
+    api_url = os.getenv('API_ENDPOINT')  # Must set this secret in GitHub
+    if not api_url:
+        raise ValueError("API_ENDPOINT environment variable not set!")
+    headers = {
+        "Content-Type": "application/json"
+    }
+    for paper in papers:
+        try:
+
+            paper_data = {
+                "title": paper[0],
+                "pdfurl": paper[1],
+                "githuburl": paper[2][0],
+                "abstract": paper[3], 
+                "authors": paper[4]
+            }
+
+            response = requests.post(
+                api_url,
+                data=json.dumps(paper_data),
+                headers=headers
+            )
+            
+            if response.status_code == 200:
+                print(f"成功发送论文: {paper_data['title']}")
+            else:
+                print(f"发送失败: {paper_data['title']}, 状态码: {response.status_code}")
+                print(f"错误信息: {response.text}")
+                
+            # 避免频繁请求，可以添加延迟
+            import time
+            time.sleep(1)  # 1秒间隔
+            
+        except Exception as e:
+            print(f"发送论文时出错 {paper_data['title']}: {str(e)}")
+
 def main():
     yesterday = load_yesterday_titles()
     today_titles = set()
@@ -137,6 +178,7 @@ def main():
         if stop or page >= 100:
             break
         page += 1
+        send_to_wps(papers)
 
     if today_papers:
         save_markdown(today_papers)
