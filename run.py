@@ -87,6 +87,7 @@ def scrape_page(page_num):
         link = paper_pdf_link if paper_pdf_link else pwc_link
         papers.append((title, link, github_links, abstract, authors))
         send_to_wps_single(title, link, github_links, abstract, authors)
+        send_to_coze_single(title, link, github_links, abstract, authors)
     return papers
 
 def save_markdown(papers):
