@@ -129,7 +129,7 @@ def send_to_coze_single(title, link, github_links, abstract, authors):
         paper_data = {
             "title": paper[0],
             "pdfurl": paper[1],
-            "githuburl": paper[2][0],
+            "codeurl": paper[2][0],
             "abstract": paper[3], 
             "authors": paper[4]
         }
