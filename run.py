@@ -153,6 +153,29 @@ def send_to_coze_single(title, link, github_links, abstract, authors):
     except Exception as e:
         print(f"发送论文到COZE时出错 {paper_data['title']}: {str(e)}")
 
+def coze_gen_abstractcn_paperclass():
+    api_url = os.getenv('COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK')  # Must set this secret in GitHub
+    if not api_url:
+        raise ValueError("COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK environment variable not set!")
+    headers = {
+        "Authorization": os.getenv('COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK_AUTHORIZATION'),
+        "Content-Type": "application/json"
+    }
+    try:
+        paper_data = {
+        }
+        response = requests.post(
+            api_url,
+            data=json.dumps(paper_data),
+            headers=headers
+        )
+        if response.status_code == 200:
+            print(f"调用成功")
+        else:
+            print(f"错误信息: {response.text}")
+    except Exception as e:
+        print(f"调用COZE生成中文摘要与分类出错 : {str(e)}")
+
 def send_to_wps_single(title, link, github_links, abstract, authors):
     # Load API URL from GitHub Actions secrets
     api_url = os.getenv('API_ENDPOINT')  # Must set this secret in GitHub
@@ -257,6 +280,7 @@ def main():
         # send_to_wps(papers)
 
     if today_papers:
+        coze_gen_abstractcn_paperclass()
         save_markdown(today_papers)
         save_today_titles(today_titles)
         generate_readme()
