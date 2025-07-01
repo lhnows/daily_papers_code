@@ -1,26 +1,13 @@
-Disentangled representations of microscopy images
-AnalogNAS-Bench: A NAS Benchmark for Analog In-Memory Computing
-GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching
-Xolver: Multi-Agent Reasoning with Holistic Experience Learning Just Like an Olympiad Team
-Response Quality Assessment for Retrieval-Augmented Generation via Conditional Conformal Factuality
-Towards Robust Learning to Optimize with Theoretical Guarantees
-SMARTIES: Spectrum-Aware Multi-Sensor Auto-Encoder for Remote Sensing Images
-PP-DocBee2: Improved Baselines with Efficient Data for Multimodal Document Understanding
-TabArena: A Living Benchmark for Machine Learning on Tabular Data
-Universal Music Representations? Evaluating Foundation Models on World Music Corpora
-RMIT-ADM+S at the SIGIR 2025 LiveRAG Challenge
-Loss-Aware Automatic Selection of Structured Pruning Criteria for Deep Neural Network Acceleration
-ReasonFlux-PRM: Trajectory-Aware PRMs for Long Chain-of-Thought Reasoning in LLMs
-LongWriter-Zero: Mastering Ultra-Long Text Generation via Reinforcement Learning
-How Good Are Synthetic Requirements ? Evaluating LLM-Generated Datasets for AI4RE
-PsyLite Technical Report
-DBConformer: Dual-Branch Convolutional Transformer for EEG Decoding
-Fast and Distributed Equivariant Graph Neural Networks by Virtual Node Learning
-Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation with Ultimate Details
-TAB: Unified Benchmarking of Time Series Anomaly Detection Methods
-Show-o2: Improved Native Unified Multimodal Models
-Introducing EG-IPT and ipt~: a novel electric guitar dataset and a new Max/MSP object for real-time classification of instrumental playing techniques
-Navigating the growing field of research on AI for software testing -- the taxonomy for AI-augmented software testing and an ontology-driven literature survey
-Learning to Skip the Middle Layers of Transformers
-Sparse-Reg: Improving Sample Complexity in Offline Reinforcement Learning using Sparsity
-CycleDistill: Bootstrapping Machine Translation using LLMs with Cyclical Distillation
+JointRank: Rank Large Set with Single Pass
+Class-Agnostic Region-of-Interest Matching in Document Images
+OracleFusion: Assisting the Decipherment of Oracle Bone Script with Structurally Constrained Semantic Typography
+Transformer-Based Spatial-Temporal Counterfactual Outcomes Estimation
+Discovering multiple antibiotic resistance phenotypes using diverse top-k subgroup list discovery
+Robust Deep Learning for Myocardial Scar Segmentation in Cardiac MRI with Noisy Labels
+Beyond Reactive Safety: Risk-Aware LLM Alignment via Long-Horizon Simulation
+RecCoT: Enhancing Recommendation via Chain-of-Thought
+Unveiling Causal Reasoning in Large Language Models: Reality or Mirage?
+EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora
+Out-of-Distribution Semantic Occupancy Prediction
+ReME: A Data-Centric Framework for Training-Free Open-Vocabulary Segmentation
+Parallels Between VLA Model Post-Training and Human Motor Learning: Progress, Challenges, and Trends
