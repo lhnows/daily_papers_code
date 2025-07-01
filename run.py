@@ -86,6 +86,7 @@ def scrape_page(page_num):
 
         link = paper_pdf_link if paper_pdf_link else pwc_link
         papers.append((title, link, github_links, abstract, authors))
+        send_to_wps_single(title, link, github_links, abstract, authors)
     return papers
 
 def save_markdown(papers):
@@ -113,6 +114,80 @@ def generate_readme():
         f.write("## 每日更新列表\n")
         for name in reversed(md_files):
             f.write(f"- [{name}](ppwcode/{name})\n")
+
+def send_to_coze_single(title, link, github_links, abstract, authors):
+    api_url = os.getenv('COZEWEBHOOK')  # Must set this secret in GitHub
+    if not api_url:
+        raise ValueError("COZEWEBHOOK environment variable not set!")
+    headers = {
+        "Authorization": os.getenv('COZEAUTHORIZATION'),
+        "Content-Type": "application/json"
+    }
+    try:
+        paper = (title, link, github_links, abstract, authors)
+        paper_data = {
+            "title": paper[0],
+            "pdfurl": paper[1],
+            "githuburl": paper[2][0],
+            "abstract": paper[3], 
+            "authors": paper[4]
+        }
+
+        response = requests.post(
+            api_url,
+            data=json.dumps(paper_data),
+            headers=headers
+        )
+        
+        if response.status_code == 200:
+            print(f"成功发送论文到COZE: {paper_data['title']}")
+        else:
+            print(f"发送COZE失败: {paper_data['title']}, 状态码: {response.status_code}")
+            print(f"错误信息: {response.text}")
+            
+        # 避免频繁请求，可以添加延迟
+        import time
+        time.sleep(1)  # 1秒间隔
+        
+    except Exception as e:
+        print(f"发送论文到COZE时出错 {paper_data['title']}: {str(e)}")
+
+def send_to_wps_single(title, link, github_links, abstract, authors):
+    # Load API URL from GitHub Actions secrets
+    api_url = os.getenv('API_ENDPOINT')  # Must set this secret in GitHub
+    if not api_url:
+        raise ValueError("API_ENDPOINT environment variable not set!")
+    headers = {
+        "Content-Type": "application/json"
+    }
+    try:
+        paper = (title, link, github_links, abstract, authors)
+        paper_data = {
+            "title": paper[0],
+            "pdfurl": paper[1],
+            "githuburl": paper[2][0],
+            "abstract": paper[3], 
+            "authors": paper[4]
+        }
+
+        response = requests.post(
+            api_url,
+            data=json.dumps(paper_data),
+            headers=headers
+        )
+        
+        if response.status_code == 200:
+            print(f"成功发送论文到WPS: {paper_data['title']}")
+        else:
+            print(f"发送WPS失败: {paper_data['title']}, 状态码: {response.status_code}")
+            print(f"错误信息: {response.text}")
+            
+        # 避免频繁请求，可以添加延迟
+        import time
+        time.sleep(1)  # 1秒间隔
+        
+    except Exception as e:
+        print(f"发送论文到WPS时出错 {paper_data['title']}: {str(e)}")
 
 def send_to_wps(papers):
     # API端点
@@ -178,7 +253,7 @@ def main():
         if stop or page >= 100:
             break
         page += 1
-        send_to_wps(papers)
+        # send_to_wps(papers)
 
     if today_papers:
         save_markdown(today_papers)
