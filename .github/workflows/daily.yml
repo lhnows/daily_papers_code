@@ -26,7 +26,12 @@ jobs:
             API_ENDPOINT: ${{ secrets.API_ENDPOINT }} # WPS 多维表格接口
             COZEAUTHORIZATION: ${{ secrets.COZEAUTHORIZATION }}  # COZE 
             COZEWEBHOOK: ${{ secrets.COZEWEBHOOK }} # COZE webhook
-        run: python run.py
+        run: |
+          while IFS= read -r line; do
+            echo "$line"  # 逐行打印到 Action 控制台
+          done < <(python -u run.py 2>&1)      
+         
+         
 
       - name: Commit & Push Results
         run: |
