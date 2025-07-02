@@ -1,0 +1,100 @@
+Detection of Breast Cancer Lumpectomy Margin with SAM-incorporated Forward-Forward Contrastive Learning
+FairyGen: Storied Cartoon Video from a Single Child-Drawn Character
+Out-of-Distribution Semantic Occupancy Prediction
+Towards Reliable Detection of Empty Space: Conditional Marked Point Processes for Object Detection
+TAPS: Tool-Augmented Personalisation via Structured Tagging
+Unlocking Constraints: Source-Free Occlusion-Aware Seamless Segmentation
+FaSTA$^*$: Fast-Slow Toolpath Agent with Subroutine Mining for Efficient Multi-turn Image Editing
+Unveiling Causal Reasoning in Large Language Models: Reality or Mirage?
+CovDocker: Benchmarking Covalent Drug Design with Tasks, Datasets, and Solutions
+DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View Diffusion
+DPLib: A Standard Benchmark Library for Distributed Power System Analysis and Optimization
+Homogenization of Multi-agent Learning Dynamics in Finite-state Markov Games
+Parallels Between VLA Model Post-Training and Human Motor Learning: Progress, Challenges, and Trends
+Boosting Domain Generalized and Adaptive Detection with Diffusion Models: Fitness, Generalization, and Transferability
+FedBKD: Distilled Federated Learning to Embrace Gerneralization and Personalization on Non-IID Data
+Curve-Aware Gaussian Splatting for 3D Parametric Curve Reconstruction
+Boosting Generative Adversarial Transferability with Self-supervised Vision Transformer Features
+PLoP: Precise LoRA Placement for Efficient Finetuning of Large Models
+WattsOnAI: Measuring, Analyzing, and Visualizing Energy and Carbon Footprint of AI Workloads
+LASFNet: A Lightweight Attention-Guided Self-Modulation Feature Fusion Network for Multimodal Object Detection
+Characterization and Mitigation of Training Instabilities in Microscaling Formats
+Class-Agnostic Region-of-Interest Matching in Document Images
+FedSC: Federated Learning with Semantic-Aware Collaboration
+Scalable Subset Selection in Linear Mixed Models
+Scalable Bayesian Low-Rank Adaptation of Large Language Models via Stochastic Variational Subspace Inference
+Pay Less Attention to Deceptive Artifacts: Robust Detection of Compressed Deepfakes on Online Social Networks
+Towards Community-Driven Agents for Machine Learning Engineering
+mTSBench: Benchmarking Multivariate Time Series Anomaly Detection and Model Selection at Scale
+Model Editing as a Double-Edged Sword: Steering Agent Ethical Behavior Toward Beneficence or Harm
+DBConformer: Dual-Branch Convolutional Transformer for EEG Decoding
+Learning to Skip the Middle Layers of Transformers
+WAFT: Warping-Alone Field Transforms for Optical Flow
+RecCoT: Enhancing Recommendation via Chain-of-Thought
+DrishtiKon: Multi-Granular Visual Grounding for Text-Rich Document Images
+Transformer-Based Spatial-Temporal Counterfactual Outcomes Estimation
+G$^{2}$D: Boosting Multimodal Learning with Gradient-Guided Distillation
+Detecting Referring Expressions in Visually Grounded Dialogue with Autoregressive Language Models
+From On-chain to Macro: Assessing the Importance of Data Source Diversity in Cryptocurrency Market Forecasting
+Narrative Shift Detection: A Hybrid Approach of Dynamic Topic Models and Large Language Models
+GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching
+Robust Deep Learning for Myocardial Scar Segmentation in Cardiac MRI with Noisy Labels
+Mitigating Hallucination of Large Vision-Language Models via Dynamic Logits Calibration
+SharpZO: Hybrid Sharpness-Aware Vision Language Model Prompt Tuning via Forward-Only Passes
+Papanicolaou Stain Unmixing for RGB Image Using Weighted Nucleus Sparsity and Total Variation Regularization
+"What's Up, Doc?": Analyzing How Users Seek Health Information in Large-Scale Conversational AI Datasets
+LLaVA-Pose: Enhancing Human Pose and Action Understanding via Keypoint-Integrated Instruction Tuning
+Antibody Design and Optimization with Multi-scale Equivariant Graph Diffusion Models for Accurate Complex Antigen Binding
+AALC: Large Language Model Efficient Reasoning via Adaptive Accuracy-Length Control
+The Decrypto Benchmark for Multi-Agent Reasoning and Theory of Mind
+OLALa: Online Learned Adaptive Lattice Codes for Heterogeneous Federated Learning
+Spatial Mental Modeling from Limited Views
+Fast ground penetrating radar dual-parameter full waveform inversion method accelerated by hybrid compilation of CUDA kernel function and PyTorch
+TableMoE: Neuro-Symbolic Routing for Structured Expert Reasoning in Multimodal Table Understanding
+PsyLite Technical Report
+Response Quality Assessment for Retrieval-Augmented Generation via Conditional Conformal Factuality
+Global Convergence of Iteratively Reweighted Least Squares for Robust Subspace Recovery
+MMSearch-R1: Incentivizing LMMs to Search
+OctoThinker: Mid-training Incentivizes Reinforcement Learning Scaling
+Complexity-aware fine-tuning
+Benchmarking Deep Learning and Vision Foundation Models for Atypical vs. Normal Mitosis Classification with Cross-Dataset Evaluation
+Maintaining MTEB: Towards Long Term Usability and Reproducibility of Embedding Benchmarks
+XVerse: Consistent Multi-Subject Control of Identity and Semantic Attributes via DiT Modulation
+Agent-RewardBench: Towards a Unified Benchmark for Reward Modeling across Perception, Planning, and Safety in Real-World Multimodal Agents
+Model-Based Real-Time Pose and Sag Estimation of Overhead Power Lines Using LiDAR for Drone Inspection
+JointRank: Rank Large Set with Single Pass
+Discovering multiple antibiotic resistance phenotypes using diverse top-k subgroup list discovery
+Probing AI Safety with Source Code
+Q-resafe: Assessing Safety Risks and Quantization-aware Safety Patching for Quantized Large Language Models
+Enhancing Homophily-Heterophily Separation: Relation-Aware Learning in Heterogeneous Graphs
+Task-Aware KV Compression For Cost-Effective Long Video Understanding
+Universal and Efficient Detection of Adversarial Data through Nonuniform Impact on Network Layers
+Model State Arithmetic for Machine Unlearning
+Learning to See in the Extremely Dark
+Beyond Reactive Safety: Risk-Aware LLM Alignment via Long-Horizon Simulation
+Distributed Lyapunov Functions for Nonlinear Networks
+EAR: Erasing Concepts from Unified Autoregressive Models
+FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language
+A Hierarchical Deep Learning Approach for Minority Instrument Detection
+ReME: A Data-Centric Framework for Training-Free Open-Vocabulary Segmentation
+Inverse Scene Text Removal
+Industrial Energy Disaggregation with Digital Twin-generated Dataset and Efficient Data Augmentation
+Latent Prototype Routing: Achieving Near-Perfect Load Balancing in Mixture-of-Experts
+How Good Are Synthetic Requirements ? Evaluating LLM-Generated Datasets for AI4RE
+OracleFusion: Assisting the Decipherment of Oracle Bone Script with Structurally Constrained Semantic Typography
+Exploiting Lightweight Hierarchical ViT and Dynamic Framework for Efficient Visual Tracking
+Exploring the Design Space of 3D MLLMs for CT Report Generation
+A Multi-Pass Large Language Model Framework for Precise and Efficient Radiology Report Error Detection
+EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora
+Reinforcement Learning Increases Wind Farm Power Production by Enabling Closed-Loop Collaborative Control
+Unidentified and Confounded? Understanding Two-Tower Models for Unbiased Learning to Rank
+WorldVLA: Towards Autoregressive Action World Model
+ReCode: Updating Code API Knowledge with Reinforcement Learning
+RAG-VisualRec: An Open Resource for Vision- and Text-Enhanced Retrieval-Augmented Generation in Recommendation
+Amortizing personalization in virtual brain twins
+HumanOmniV2: From Understanding to Omni-Modal Reasoning with Context
+A foundation model with multi-variate parallel attention to generate neuronal activity
+AGTCNet: A Graph-Temporal Approach for Principled Motor Imagery EEG Classification
+Topology-Aware Modeling for Unsupervised Simulation-to-Reality Point Cloud Recognition
+Style-Aligned Image Composition for Robust Detection of Abnormal Cells in Cytopathology
+HyperSORT: Self-Organising Robust Training with hyper-networks
