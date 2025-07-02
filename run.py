@@ -257,7 +257,7 @@ def main():
     yesterday = load_yesterday_titles()
     today_titles = set()
     today_papers = []
-    page = 1
+    page = 5
 
     while True:
         print(f"Fetching page {page}...")
@@ -277,7 +277,6 @@ def main():
         if stop or page >= 100:
             break
         page += 1
-        # send_to_wps(papers)
 
     if today_papers:
         coze_gen_abstractcn_paperclass()
