@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import os
 from datetime import datetime
 import json
-from src.sqlitedb import PaperDatabase
+from sqlitedb import PaperDatabase
 from papercode import DATA_DIR,scrape_page
 from get_llm_response import get_llm_response
 
