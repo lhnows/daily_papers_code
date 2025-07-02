@@ -274,7 +274,7 @@ def main():
                 today_papers.append((title, *rest))
                 today_titles.add(title)
 
-        if stop or page >= 100:
+        if stop or page >= 10:
             break
         page += 1
         # send_to_wps(papers)
