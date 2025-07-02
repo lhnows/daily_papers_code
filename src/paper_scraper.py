@@ -144,7 +144,7 @@ def main():
     yesterday = load_yesterday_titles()
     today_titles = set()
     today_papers = []
-    page = 5
+    page = 1
     BAILIAN_GPT_KEY = os.getenv('BAILIAN_GPT_KEY')  # Must set this secret in GitHub
     if not BAILIAN_GPT_KEY:
         raise ValueError("BAILIAN_GPT_KEY environment variable not set!")
@@ -172,7 +172,7 @@ def main():
                 today_papers.append((title, pdfurl, codeurl, abstract, abstract_cn,authors))
                 today_titles.add(title)
 
-        if stop or page >= 1:
+        if stop or page >= 5:
             break
         page += 1
         # send_to_wps(papers)
