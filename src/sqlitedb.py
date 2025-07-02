@@ -3,7 +3,7 @@ import json
 from typing import List, Dict, Optional
 
 class PaperDatabase:
-    def __init__(self, db_path: str = 'data/papers.db'):
+    def __init__(self, db_path: str = '../data/papers.db'):
         """初始化数据库连接"""
         self.conn = sqlite3.connect(db_path)
         self.create_table()
