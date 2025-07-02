@@ -25,7 +25,7 @@ jobs:
         env:
             API_ENDPOINT: ${{ secrets.API_ENDPOINT }} # WPS 多维表格接口
             BAILIAN_GPT_KEY: ${{ secrets.BAILIAN_GPT_KEY }}  # COZE 
-
+        working-directory: src
         run: |
           while IFS= read -r line; do
             echo "$line"  # 逐行打印到 Action 控制台
