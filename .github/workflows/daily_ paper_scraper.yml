@@ -29,7 +29,7 @@ jobs:
         run: |
           while IFS= read -r line; do
             echo "$line"  # 逐行打印到 Action 控制台
-          done < <(python -u paper_scraper.py 2>&1)      
+          done < <(python -u src/paper_scraper.py 2>&1)      
       - name: Commit & Push Results
         run: |
           ls
