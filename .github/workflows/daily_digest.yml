@@ -1,0 +1,39 @@
+name: Daily Paper digest
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # 每天 背景 时间 06:00 运行； UTC时间 = 北京时间 - 8小时
+  workflow_dispatch:     # 可手动触发
+
+jobs:
+  run-daily-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v3
+        with:
+            token: ${{ secrets.PAT_TOKEN }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Digest
+        env:
+            COZE_API_DIGEST_WEBHOOK_AUTHORIZATION: ${{ secrets.COZE_API_DIGEST_WEBHOOK_AUTHORIZATION }}  # COZE 
+            COZE_API_DIGEST_WEBHOOK: ${{ secrets.COZE_API_DIGEST_WEBHOOK }} # COZE webhook
+        run: |
+          while IFS= read -r line; do
+            echo "$line"  # 逐行打印到 Action 控制台
+          done < <(python -u daily_digest.py 2>&1)      
+      # - name: Commit & Push Results
+      #   run: |
+      #     ls
+      #     git config --global user.name 'lhnows'
+      #     git config --global user.email 'lhnows@qq.com'
+      #     git add .
+      #     git commit -m "每日更新" 
+      #     git push

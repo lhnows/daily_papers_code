@@ -2,7 +2,7 @@ name: Daily Paper Update
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # 每天 UTC 时间 05:00 运行
+    - cron: '0 21 * * *'  # 每天 背景 时间 05:00 运行； UTC时间 = 北京时间 - 8小时
   workflow_dispatch:     # 可手动触发
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
         run: |
           while IFS= read -r line; do
             echo "$line"  # 逐行打印到 Action 控制台
-          done < <(python -u run.py 2>&1)      
+          done < <(python -u paper_scraper.py 2>&1)      
       - name: Commit & Push Results
         run: |
           ls
