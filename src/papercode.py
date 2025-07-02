@@ -1,7 +1,7 @@
 import os
 import requests
 from bs4 import BeautifulSoup
-DATA_DIR = "data"
+DATA_DIR = "../data"
 
 BASE_URL = "https://paperswithcode.com/latest?page={}"
 PWC_BASE = "https://paperswithcode.com"

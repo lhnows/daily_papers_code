@@ -9,7 +9,7 @@ from papercode import DATA_DIR,scrape_page
 from get_llm_response import get_llm_response
 
 db = PaperDatabase()
-PAPERS_DIR = "ppwcode"
+PAPERS_DIR = "../ppwcode"
 os.makedirs(PAPERS_DIR, exist_ok=True)
 
 
@@ -43,7 +43,7 @@ def save_markdown(papers):
 def generate_readme():
     today = datetime.now().strftime("%Y-%m-%d")
     md_files = sorted([f for f in os.listdir(PAPERS_DIR) if f.endswith(".md")])
-    with open("README.md", "w", encoding="utf-8") as f:
+    with open("../README.md", "w", encoding="utf-8") as f:
         f.write("# 每日最新论文更新\n\n")
         f.write("本项目每天自动更新 最新论文和配套代码，并生成 Markdown 文件。\n\n")
         f.write(f"**最新更新：{today}**\n\n")
