@@ -19,15 +19,13 @@ jobs:
           python-version: '3.11'
 
       - name: Install Dependencies
-        run: pip install beautifulsoup4 requests
+        run: pip install beautifulsoup4 requests openai sqlitedb
 
       - name: Run Scraper
         env:
             API_ENDPOINT: ${{ secrets.API_ENDPOINT }} # WPS 多维表格接口
-            COZEAUTHORIZATION: ${{ secrets.COZEAUTHORIZATION }}  # COZE 
-            COZEWEBHOOK: ${{ secrets.COZEWEBHOOK }} # COZE webhook
-            COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK_AUTHORIZATION: ${{ secrets.COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK_AUTHORIZATION }}  # COZE 
-            COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK: ${{ secrets.COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK }} # COZE webhook
+            BAILIAN_GPT_KEY: ${{ secrets.BAILIAN_GPT_KEY }}  # COZE 
+
         run: |
           while IFS= read -r line; do
             echo "$line"  # 逐行打印到 Action 控制台

@@ -1,17 +1,17 @@
-# -*- coding: utf-8 -*-
+# run.py
 import requests
 from bs4 import BeautifulSoup
 import os
 from datetime import datetime
 import json
+from sqlitedb import PaperDatabase
+from papercode import DATA_DIR,scrape_page
+from get_llm_response import get_llm_response
 
-DATA_DIR = "data"
+db = PaperDatabase()
 PAPERS_DIR = "ppwcode"
-BASE_URL = "https://paperswithcode.com/latest?page={}"
-PWC_BASE = "https://paperswithcode.com"
-
-os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(PAPERS_DIR, exist_ok=True)
+
 
 def load_yesterday_titles():
     path = os.path.join(DATA_DIR, "yesterday_titles.txt")
@@ -26,84 +26,19 @@ def save_today_titles(titles):
         for title in titles:
             f.write(title + "\n")
 
-def resolve_github_links_and_pdf(code_url):
-    github_links = set()
-    paper_pdf_link = ""
-    try:
-        full_url = PWC_BASE + code_url
-        res = requests.get(full_url)
-        res.raise_for_status()
-        soup = BeautifulSoup(res.text, "html.parser")
-
-        for tag in soup.select("a.code-table-link"):
-            href = tag.get("href", "")
-            if 'github.com' in href:
-                github_links.add(href.strip())
-
-        for a_tag in soup.select("a"):
-            href = a_tag.get("href", "")
-            if href.endswith(".pdf") and not href.startswith(PWC_BASE):
-                paper_pdf_link = href
-                break
-    except Exception:
-        pass
-    return list(github_links), paper_pdf_link
-
-def scrape_paper_details(paper_url):
-    abstract = ""
-    authors = []
-    try:
-        res = requests.get(paper_url)
-        res.raise_for_status()
-        soup = BeautifulSoup(res.text, "html.parser")
-        abs_tag = soup.select_one(".paper-abstract p")
-        if abs_tag:
-            abstract = abs_tag.text.strip()
-        authors = [a.text.strip() for a in soup.select("span.author-name")]
-    except Exception:
-        pass
-    return abstract, ", ".join(authors)
-
-def scrape_page(page_num):
-    url = BASE_URL.format(page_num)
-    res = requests.get(url)
-    res.raise_for_status()
-    soup = BeautifulSoup(res.text, "html.parser")
-
-    papers = []
-    for item in soup.select("div.item.paper-card"):
-        title_tag = item.select_one("h1 a")
-        if not title_tag:
-            continue
-        title = title_tag.text.strip()
-        pwc_link = PWC_BASE + title_tag["href"]
-
-        abstract, authors = scrape_paper_details(pwc_link)
-
-        code_tag = item.select_one("a.badge")
-        raw_code_link = code_tag["href"] if code_tag else ""
-        github_links, paper_pdf_link = resolve_github_links_and_pdf(raw_code_link) if raw_code_link else ([], "")
-
-        link = paper_pdf_link if paper_pdf_link else pwc_link
-        papers.append((title, link, github_links, abstract, authors))
-        send_to_wps_single(title, link, github_links, abstract, authors)
-        send_to_coze_single(title, link, github_links, abstract, authors)
-    return papers
-
 def save_markdown(papers):
     today = datetime.now().strftime("%Y-%m-%d")
     md_path = os.path.join(PAPERS_DIR, f"papers_{today}.md")
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(f"# Papers with Code - {today}\n\n")
-        f.write("| 论文 | 代码 | 摘要 | 作者 |\n")
-        f.write("|------|------|------|------|\n")
-        for title, link, code_links, abstract, authors in papers:
-            unique_links = sorted(set(code_links))
-            title_md = f"[{title}]({link})"
-            codes_md = ", ".join(f"[GitHub]({url})" for url in unique_links) if unique_links else ""
-            abstract_md = abstract.replace("|", " ").replace("\n", " ").strip()
-            authors_md = authors.replace("|", " ").strip()
-            f.write(f"| {title_md} | {codes_md} | {abstract_md} | {authors_md} |\n")
+  
+        
+        for title, link, code_links, abstract,abstract_cn, authors in papers:
+            f.write(f"## 论文标题 {title}\n\n")
+            f.write(f"- **中文摘要：** {abstract_cn}\n\n")
+            f.write(f"- **英文摘要：** {abstract}\n\n")
+            f.write(f"- **论文链接** {link}\n\n")
+            f.write(f"- **代码链接** {', '.join(code_links)}\n\n")
 
 def generate_readme():
     today = datetime.now().strftime("%Y-%m-%d")
@@ -116,65 +51,6 @@ def generate_readme():
         for name in reversed(md_files):
             f.write(f"- [{name}](ppwcode/{name})\n")
 
-def send_to_coze_single(title, link, github_links, abstract, authors):
-    api_url = os.getenv('COZEWEBHOOK')  # Must set this secret in GitHub
-    if not api_url:
-        raise ValueError("COZEWEBHOOK environment variable not set!")
-    headers = {
-        "Authorization": os.getenv('COZEAUTHORIZATION'),
-        "Content-Type": "application/json"
-    }
-    try:
-        paper = (title, link, github_links, abstract, authors)
-        paper_data = {
-            "title": paper[0],
-            "pdfurl": paper[1],
-            "codeurl": paper[2][0],
-            "abstract": paper[3], 
-            "authors": paper[4]
-        }
-
-        response = requests.post(
-            api_url,
-            data=json.dumps(paper_data),
-            headers=headers
-        )
-        
-        if response.status_code == 200:
-            print(f"成功发送论文到COZE: {paper_data['title']}")
-        else:
-            print(f"发送COZE失败: {paper_data['title']}, 状态码: {response.status_code}")
-            print(f"错误信息: {response.text}")
-            
-        # 避免频繁请求，可以添加延迟
-        import time
-        time.sleep(1)  # 1秒间隔
-        
-    except Exception as e:
-        print(f"发送论文到COZE时出错 {paper_data['title']}: {str(e)}")
-
-def coze_gen_abstractcn_paperclass():
-    api_url = os.getenv('COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK')  # Must set this secret in GitHub
-    if not api_url:
-        raise ValueError("COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK environment variable not set!")
-    headers = {
-        "Authorization": os.getenv('COZE_ABSTRACTCN_PAPERCLASS_WEBHOOK_AUTHORIZATION'),
-        "Content-Type": "application/json"
-    }
-    try:
-        paper_data = {
-        }
-        response = requests.post(
-            api_url,
-            data=json.dumps(paper_data),
-            headers=headers
-        )
-        if response.status_code == 200:
-            print(f"调用成功")
-        else:
-            print(f"错误信息: {response.text}")
-    except Exception as e:
-        print(f"调用COZE生成中文摘要与分类出错 : {str(e)}")
 
 def send_to_wps_single(title, link, github_links, abstract, authors):
     # Load API URL from GitHub Actions secrets
@@ -213,35 +89,95 @@ def send_to_wps_single(title, link, github_links, abstract, authors):
     except Exception as e:
         print(f"发送论文到WPS时出错 {paper_data['title']}: {str(e)}")
 
+def send_to_wps(papers):
+    # API端点
+    # api_url = ""
+    # Load API URL from GitHub Actions secrets
+    api_url = os.getenv('API_ENDPOINT')  # Must set this secret in GitHub
+    if not api_url:
+        raise ValueError("API_ENDPOINT environment variable not set!")
+    headers = {
+        "Content-Type": "application/json"
+    }
+    for paper in papers:
+        try:
+
+            paper_data = {
+                "title": paper[0],
+                "pdfurl": paper[1],
+                "githuburl": paper[2][0],
+                "abstract": paper[3], 
+                "authors": paper[4]
+            }
+
+            response = requests.post(
+                api_url,
+                data=json.dumps(paper_data),
+                headers=headers
+            )
+            
+            if response.status_code == 200:
+                print(f"成功发送论文: {paper_data['title']}")
+            else:
+                print(f"发送失败: {paper_data['title']}, 状态码: {response.status_code}")
+                print(f"错误信息: {response.text}")
+                
+            # 避免频繁请求，可以添加延迟
+            import time
+            time.sleep(1)  # 1秒间隔
+            
+        except Exception as e:
+            print(f"发送论文时出错 {paper_data['title']}: {str(e)}")
+
+def add_paper_to_db(title, link, github_links, abstract,abstract_cn, authors):
+    paper_data = {
+        'title': title,
+        'pdfurl': link,
+        'codeurl': github_links,
+        'abstract': abstract,
+        'abstract_cn': abstract_cn,
+        'authors': authors,
+    }
+    db.insert_paper(paper_data)
 
 def main():
     yesterday = load_yesterday_titles()
     today_titles = set()
     today_papers = []
-    page = 1
-
+    page = 5
+    BAILIAN_GPT_KEY = os.getenv('BAILIAN_GPT_KEY')  # Must set this secret in GitHub
+    if not BAILIAN_GPT_KEY:
+        raise ValueError("BAILIAN_GPT_KEY environment variable not set!")
     while True:
         print(f"Fetching page {page}...")
-        papers = scrape_page(page)
+        papers = scrape_page(page,[])
         if not papers:
             break
 
         stop = False
-        for title, *rest in papers:
+        for title, pdfurl, codeurl, abstract, authors in papers:
             if title in yesterday:
                 stop = True
                 break
             if title not in today_titles:
-                today_papers.append((title, *rest))
+                prompt = f"请根据以下摘要，生成中文总结,不需要标题，不得出现摘要、总结字样，请直接生成总结后的内容：title:{title} abstract:{abstract}"
+                abstract_cn = get_llm_response(
+                                                prompt=prompt,
+                                                model_name="qwen-max",
+                                                api_key=BAILIAN_GPT_KEY
+                                            )
+                print(f"{title}\n {abstract_cn}\n")
+                add_paper_to_db(title, pdfurl, codeurl, abstract, abstract_cn,authors)
+                # send_to_wps_single(title, pdfurl, codeurl, abstract, abstract_cn,authors)
+                today_papers.append((title, pdfurl, codeurl, abstract, abstract_cn,authors))
                 today_titles.add(title)
 
-        if stop or page >= 10:
+        if stop or page >= 1:
             break
         page += 1
         # send_to_wps(papers)
 
     if today_papers:
-        coze_gen_abstractcn_paperclass()
         save_markdown(today_papers)
         save_today_titles(today_titles)
         generate_readme()
@@ -250,4 +186,8 @@ def main():
         print("No new papers found.")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+ 
