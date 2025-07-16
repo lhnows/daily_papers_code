@@ -1,50 +1,50 @@
-FairyGen: Storied Cartoon Video from a Single Child-Drawn Character
-LASFNet: A Lightweight Attention-Guided Self-Modulation Feature Fusion Network for Multimodal Object Detection
-Antibody Design and Optimization with Multi-scale Equivariant Graph Diffusion Models for Accurate Complex Antigen Binding
-Model State Arithmetic for Machine Unlearning
-Style-Aligned Image Composition for Robust Detection of Abnormal Cells in Cytopathology
-Boosting Domain Generalized and Adaptive Detection with Diffusion Models: Fitness, Generalization, and Transferability
-Unveiling Causal Reasoning in Large Language Models: Reality or Mirage?
-Class-Agnostic Region-of-Interest Matching in Document Images
-A Hierarchical Deep Learning Approach for Minority Instrument Detection
-AGTCNet: A Graph-Temporal Approach for Principled Motor Imagery EEG Classification
-Maintaining MTEB: Towards Long Term Usability and Reproducibility of Embedding Benchmarks
-Transformer-Based Spatial-Temporal Counterfactual Outcomes Estimation
-EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora
-How Good Are Synthetic Requirements ? Evaluating LLM-Generated Datasets for AI4RE
-G$^{2}$D: Boosting Multimodal Learning with Gradient-Guided Distillation
-FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language
-FedSC: Federated Learning with Semantic-Aware Collaboration
-Robust Deep Learning for Myocardial Scar Segmentation in Cardiac MRI with Noisy Labels
-JointRank: Rank Large Set with Single Pass
-HumanOmniV2: From Understanding to Omni-Modal Reasoning with Context
-Learning to See in the Extremely Dark
-PsyLite Technical Report
-HyperSORT: Self-Organising Robust Training with hyper-networks
-DrishtiKon: Multi-Granular Visual Grounding for Text-Rich Document Images
-DBConformer: Dual-Branch Convolutional Transformer for EEG Decoding
-Benchmarking Deep Learning and Vision Foundation Models for Atypical vs. Normal Mitosis Classification with Cross-Dataset Evaluation
-RecCoT: Enhancing Recommendation via Chain-of-Thought
-WorldVLA: Towards Autoregressive Action World Model
-Scalable Bayesian Low-Rank Adaptation of Large Language Models via Stochastic Variational Subspace Inference
-LLaVA-Pose: Enhancing Human Pose and Action Understanding via Keypoint-Integrated Instruction Tuning
-Out-of-Distribution Semantic Occupancy Prediction
-Mitigating Hallucination of Large Vision-Language Models via Dynamic Logits Calibration
-ReME: A Data-Centric Framework for Training-Free Open-Vocabulary Segmentation
-Parallels Between VLA Model Post-Training and Human Motor Learning: Progress, Challenges, and Trends
-Complexity-aware fine-tuning
-Discovering multiple antibiotic resistance phenotypes using diverse top-k subgroup list discovery
-FaSTA$^*$: Fast-Slow Toolpath Agent with Subroutine Mining for Efficient Multi-turn Image Editing
-Learning to Skip the Middle Layers of Transformers
-Amortizing personalization in virtual brain twins
-Task-Aware KV Compression For Cost-Effective Long Video Understanding
-Homogenization of Multi-agent Learning Dynamics in Finite-state Markov Games
-"What's Up, Doc?": Analyzing How Users Seek Health Information in Large-Scale Conversational AI Datasets
-Beyond Reactive Safety: Risk-Aware LLM Alignment via Long-Horizon Simulation
-OracleFusion: Assisting the Decipherment of Oracle Bone Script with Structurally Constrained Semantic Typography
-Latent Prototype Routing: Achieving Near-Perfect Load Balancing in Mixture-of-Experts
-Unlocking Constraints: Source-Free Occlusion-Aware Seamless Segmentation
-XVerse: Consistent Multi-Subject Control of Identity and Semantic Attributes via DiT Modulation
-TableMoE: Neuro-Symbolic Routing for Structured Expert Reasoning in Multimodal Table Understanding
-Towards Reliable Detection of Empty Space: Conditional Marked Point Processes for Object Detection
-Agent-RewardBench: Towards a Unified Benchmark for Reward Modeling across Perception, Planning, and Safety in Real-World Multimodal Agents
+Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+MVNet: Hyperspectral Remote Sensing Image Classification Based on Hybrid Mamba-Transformer Vision Backbone Architecture
+UQLM: A Python Package for Uncertainty Quantification in Large Language Models
+Estimating Object Physical Properties from RGB-D Vision and Depth Robot Sensors Using Deep Learning
+Rethinking Query-based Transformer for Continual Image Segmentation
+InvestAlign: Overcoming Data Scarcity in Aligning Large Language Models with Investor Decision-Making Processes under Herd Behavior
+DreamVLA: A Vision-Language-Action Model Dreamed with Comprehensive World Knowledge
+GNN-CNN: An Efficient Hybrid Model of Convolutional and Graph Neural Networks for Text Representation
+SCOOTER: A Human Evaluation Framework for Unrestricted Adversarial Examples
+Skywork-R1V3 Technical Report
+AI-Enhanced Pediatric Pneumonia Detection: A CNN-Based Approach Using Data Augmentation and Generative Adversarial Networks (GANs)
+PaddleOCR 3.0 Technical Report
+SV-DRR: High-Fidelity Novel View X-Ray Synthesis Using Diffusion Model
+Growing Transformers: Modular Composition and Layer-wise Expansion on a Frozen Substrate
+Bridging Robustness and Generalization Against Word Substitution Attacks in NLP via the Growth Bound Matrix Approach
+any4: Learned 4-bit Numeric Representation for LLMs
+eegFloss: A Python package for refining sleep EEG recordings using machine learning models
+PanoDiff-SR: Synthesizing Dental Panoramic Radiographs using Diffusion and Super-resolution
+EduCoder: An Open-Source Annotation System for Education Transcript Data
+MoFE-Time: Mixture of Frequency Domain Experts for Time-Series Forecasting Models
+VoTranhAbyssCoreMicro and PoliticalCore: A Unified Framework for Simulating Complex Economic and Political Dynamics
+CLIP-Guided Backdoor Defense through Entropy-Based Poisoned Dataset Separation
+Emergent Semantics Beyond Token Embeddings: Transformer LMs with Frozen Visual Unicode Representations
+SAMO: A Lightweight Sharpness-Aware Approach for Multi-Task Optimization with Joint Global-Local Perturbation
+Predicting Graph Structure via Adapted Flux Balance Analysis
+VOTE: Vision-Language-Action Optimization with Trajectory Ensemble Voting
+FA: Forced Prompt Learning of Vision-Language Models for Out-of-Distribution Detection
+Towards Interpretable Time Series Foundation Models
+SE(3)-Equivariant Diffusion Policy in Spherical Fourier Space
+Temporal Continual Learning with Prior Compensation for Human Motion Prediction
+LoSiA: Efficient High-Rank Fine-Tuning via Subnet Localization and Optimization
+Learning Robust Stereo Matching in the Wild with Selective Mixture-of-Experts
+Graph Collaborative Attention Network for Link Prediction in Knowledge Graphs
+MS-DPPs: Multi-Source Determinantal Point Processes for Contextual Diversity Refinement of Composite Attributes in Text to Image Retrieval
+Stochastic Human Motion Prediction with Memory of Action Transition and Action Characteristic
+Automated Neuron Labelling Enables Generative Steering and Interpretability in Protein Language Models
+VERITAS: Verification and Explanation of Realness in Images for Transparency in AI Systems
+Is Diversity All You Need for Scalable Robotic Manipulation?
+Exploring Remote Physiological Signal Measurement under Dynamic Lighting Conditions at Night: Dataset, Experiment, and Analysis
+PacGDC: Label-Efficient Generalizable Depth Completion with Projection Ambiguity and Consistency
+LifelongPR: Lifelong knowledge fusion for point cloud place recognition based on replay and prompt learning
+REST: Stress Testing Large Reasoning Models by Asking Multiple Problems at Once
+Open Source Planning & Control System with Language Agents for Autonomous Scientific Discovery
+The Extended SONICOM HRTF Dataset and Spatial Audio Metrics Toolbox
+PresentAgent: Multimodal Agent for Presentation Video Generation
+Objectomaly: Objectness-Aware Refinement for OoD Segmentation with Structural Consistency and Boundary Precision
+AI-Driven Cytomorphology Image Synthesis for Medical Diagnostics
+MambaFusion: Height-Fidelity Dense Global Fusion for Multi-modal 3D Object Detection
+Differential Attention for Multimodal Crisis Event Analysis
+Car Object Counting and Position Estimation via Extension of the CLIP-EBC Framework
